@@ -1,0 +1,16 @@
+<ion-view view-title="Students" ng-init="doDisplay()">
+  <ion-content>
+ 
+
+<ion-list ng-repeat="fetch in list">
+<ion-checkbox ng-model="fetch.SELECTED">
+	{{fetch.student_id}}
+	<br>
+	{{fetch.student_name}}
+</ion-checkbox>
+</ion-list>
+<label class="item">
+    <button class="button button-block button-royal" type="submit" ng-click="check(list)">Submit</button>
+</label>
+    </ion-content>
+    </ion-view>

@@ -1,0 +1,23 @@
+<ion-modal-view style="background-color:#3F3F5A">
+
+  <div class="main">
+   
+    <div class="login-form">
+      <h1>Faculty Login</h1>
+          <div class="head">
+            <img src="img/user.png" alt=""/>
+          </div>
+    <form ng-submit="doLogin()">
+        <input type="text" class="text" placeholder="USERNAME" value="USERNAME" ng-model="loginData.username">
+
+        <input type="password" value="Password" placeholder="PASSWORD" ng-model="loginData.password">
+        
+        <div class="submit">
+              <input type="submit" value="LOGIN" ></input>
+        </div>  
+    </form>
+    <h1>Indus University</h1>
+    </div>
+  </div>
+ 
+</ion-modal-view>

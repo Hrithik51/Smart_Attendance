@@ -1,0 +1,36 @@
+<ion-view view-title="Students" ng-init="doDisplay()">
+  <ion-content>
+ 
+
+<ion-list ng-repeat="fetch in list">
+<ion-checkbox ng-model="fetch.SELECTED">
+	{{fetch.student_id}}
+	<br>
+	{{fetch.student_name}}
+</ion-checkbox>
+</ion-list>
+
+
+<ion-list ng-repeat="fetch in unassign_list">
+<label class="item item-input item-select">
+    <div class="input-label">
+    {{fetch.student_id}}
+	<br>
+	  {{fetch.student_name}}
+    </div>
+    <select ng-model="fetch.unassign">      
+      <option  value="P">P</option>
+      <option  value="A">A</option>
+      <option  value="" selected>NA</option>
+	</select>
+</label>
+</ion-list>
+
+
+
+
+<label class="item">
+    <button class="button button-block button-royal" type="submit" ng-click="check(list,unassign_list)">Submit</button>
+</label>
+    </ion-content>
+    </ion-view>

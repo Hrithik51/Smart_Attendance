@@ -1,0 +1,16 @@
+<ion-view view-title="Manage Data" ng-init="datafetch()">
+    
+    <ion-content ng-class="{expanded:isExpanded}" style="background-color:#5E5E94">
+           
+            <div class="card stable-bg ink ink-dark"  ng-repeat="fetch in datalist">
+                <div class="item item-text-wrap"  style="color:green" >
+                 {{fetch.university_name}}--{{fetch.college_name}}--{{fetch.branch_name}}
+                </div>
+                <label class="item">
+          	     	<button class="button button-block button-royal" 
+                    ng-click="delete({{fetch.branch_id}})">Delete
+                    </button>
+    			</label>
+             </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,98 @@
+<ion-modal-view>
+<ion-view view-title="Search">
+  <ion-content>
+  <form ng-submit="doFetch()"> 
+  <div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label" ng-init="doUniversity()">
+      Select
+    </div>
+    <select data-ng-model="fetchData.branch">
+      <option name="{{fetch.branch_id}}" ng-repeat="fetch in list" value="{{fetch.branch_id}}">{{fetch.university_name}}--{{fetch.college_name}}--{{fetch.branch_name}}</option>
+
+
+    </select>
+  </label>
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Semester
+    </div>
+    <select ng-model="fetchData.sem" ng-change="doSub()">
+      <option name="1">1</option>
+      <option name="2">2</option>
+      <option name="3">3</option>
+      <option name="4">4</option>
+      <option name="5">5</option>
+      <option name="6">6</option>
+      <option name="7">7</option>
+      <option name="8">8</option>
+      
+    </select>
+  </label>
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Student Type
+    </div>
+    <select ng-model="fetchData.type">
+      <option  value="all">All</option>
+      <option  value="1">Batch-1</option>
+      <option  value="2">Batch-2</option>
+      <option  value="3">Batch-3</option>
+      <option  value="4">Batch-4</option>
+    </select>
+  </label>
+
+
+  <label class="item item-input item-select">
+    <div class="input-label" ng-keypress="doSub()">
+      Subject
+    </div>
+    <select ng-model="fetchData.subject" >
+      <option name="{{fetch.sub_id}}" value="{{fetch.sub_id}}"ng-repeat="fetch in subjectlist" >{{fetch.sub_name}}</option>
+
+    </select>
+  </label>
+
+  
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Chapter Number
+    </div>
+    <select ng-model="fetchData.chap_num">
+      <option name="1">1</option>
+      <option name="2">2</option>
+      <option name="3">3</option>
+      <option name="4">4</option>
+      <option name="5">5</option>
+      <option name="6">6</option>
+      <option name="7">7</option>
+      <option name="8">8</option>
+      
+    </select>
+  </label>
+
+  <label class="item item-input">
+  <div class="input-label" >Topic Title</div>
+  <input type="text" ng-model="fetchData.topic_title">
+  </label>
+
+
+  <label class="item item-input">
+  <div class="input-label" >Date</div>
+  <input type="date" id="getDate">
+
+  </label>
+</div>
+  
+
+    <label class="item">
+          <button class="button button-block button-royal" type="submit">Submit</button>
+    </label>
+  </form>
+  </ion-content>
+</ion-view>
+</ion-modal-view>

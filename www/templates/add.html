@@ -1,0 +1,64 @@
+<ion-modal-view>
+<ion-view view-title="Add">
+  <ion-content>
+  <form ng-submit="doAdd()"> 
+  <div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label" ng-init="doUni()">
+      University
+    </div>
+    <select data-ng-model="fetchData.university" ng-change="doCol()" >
+      <option name="{{fetch.university_id}}" ng-repeat="fetch in list" value="{{fetch.university_id}}">{{fetch.university_name}}</option>
+
+
+    </select>
+  </label>
+
+  <label class="item item-input item-select">
+    <div class="input-label" ng-keypress="doCol()">
+      College
+    </div>
+    <select data-ng-model="fetchData.college" ng-change="doBranch()">
+      <option name="{{fetch.college_id}}" ng-repeat="fetch in collist" value="{{fetch.college_id}}" >{{fetch.college_name}}</option>
+
+    </select>
+  </label>
+
+  <label class="item item-input item-select">
+    <div class="input-label" ng-keypress="doBranch()">
+      Branch
+    </div>
+    <select ng-model="fetchData.branch" >
+      <option name="{{fetch.branch_id}}" ng-repeat="fetch in branchlist" value="{{fetch.branch_id}}">{{fetch.branch_name}}</option>
+
+    </select>
+  </label>
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Semester
+    </div>
+    <select ng-model="fetchData.sem" ng-change="doSub()">
+      <option name="1">1</option>
+      <option name="2">2</option>
+      <option name="3">3</option>
+      <option name="4">4</option>
+      <option name="5">5</option>
+      <option name="6">6</option>
+      <option name="7">7</option>
+      <option name="8">8</option>
+      
+    </select>
+  </label>
+
+
+</div>
+  
+    <label class="item">
+          <button class="button button-block button-royal" type="submit">Submit</button>
+    </label>
+  </form>
+  </ion-content>
+</ion-view>
+</ion-modal-view>
